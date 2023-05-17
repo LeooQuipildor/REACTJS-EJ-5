@@ -1,0 +1,10 @@
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, #dc00c9, #aa0086, #740e4f, #3d1126, #000000);
+}
+
+.mainPage{
+  flex-grow: 1;
+}
