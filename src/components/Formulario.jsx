@@ -7,9 +7,17 @@ const Formulario = () => {
   const [tarea, setTarea] = useState("");
   const [listadoTareas, setListadoTareas] = useState([]);
 
+
+  //Aqui creo mis funciones
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    setListadoTareas([...listadoTareas, tarea])
+    console.log(e.target)
+    setTarea("");
+  }
   return (
     <section>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3 d-flex" controlId="tarea">
           <Form.Control type="text" placeholder="Ingrese una tarea" onChange={(e)=>setTarea(e.target.value)} value={tarea}/>
           <Button variant="primary" type="submit">
