@@ -1,11 +1,17 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import ListaTarea from './ListaTarea';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Formulario = () => {
   const [tarea, setTarea] = useState("");
-  const [listadoTareas, setListadoTareas] = useState([]);
+  let tareasLocalStorage = JSON.parse(localStorage.getItem("listaTareas")) || [];
+  const [listadoTareas, setListadoTareas] = useState(tareasLocalStorage);
+
+
+  useEffect(()=>{
+    localStorage.setItem("listaTareas",JSON.stringify(listadoTareas))
+  },[listadoTareas])
 
 
   //Aqui creo mis funciones
