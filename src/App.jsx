@@ -10,9 +10,12 @@ function App() {
   return (
     <>
     <Container className='mainPage'>
-      <h1 className='display-4 text-center text-light'>Titulo de prueba</h1>
-      <hr className='text-light border-2 opacity-50'/>
-      <Formulario></Formulario>
+      <section className='cardLista'>
+        <h1 className='display-4 text-center text-light pt-5'>BIENVENIDO</h1>
+        <h2 className='text-center text-light'>Ingrese sus tareas</h2>
+        <hr className='text-light border-2 opacity-50 mx-5'/>
+        <Formulario></Formulario>
+      </section>
     </Container>
     <footer className='bg-dark text-light text-center py-4'>
       <p>&copy;Todos los derechos reservados</p>
